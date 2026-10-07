@@ -11,7 +11,7 @@ import { initCustomSelect } from "./select.js";
     };
 
     async function init() {
-        const gradeSystem = await loadJSON("test.json");
+        const gradeSystem = await loadJSON();
         const list = idList(gradeSystem);
         for (const subject of list) {
             const cell = await waitForElement(subject);

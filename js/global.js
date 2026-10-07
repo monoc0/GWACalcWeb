@@ -1,7 +1,16 @@
-export async function loadJSON(jsonFile) {
+const DEFAULT = "json/g9.json"
+
+const searchParams = new URLSearchParams(location.search);
+const name = searchParams.get("data");
+
+export const DATA = name
+    ? `data/${name.replace(/[^a-z0-9_-]/gi, "")}.json`
+    : DEFAULT;
+
+export async function loadJSON(jsonFile = DATA) {
     let parsed
     const file = await fetch(jsonFile);
-    if (file.ok == true && file.status == 200); {
+    if (file.ok && file.status == 200) {
         parsed = await file.json();
     };
     return parsed;

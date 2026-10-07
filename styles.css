@@ -12,6 +12,10 @@ body {
     align-items: center;
 }
 
+h2 {
+  font-weight: 300;
+}
+
 #topbar {
   display: flex;
   background-color: #eeed;

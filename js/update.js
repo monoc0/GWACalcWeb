@@ -7,7 +7,7 @@ document.addEventListener("change", (e) => {
     if (e.target.matches("select")) updateGWA();
 })
 
-gradeSystem = await loadJSON('test.json');
+gradeSystem = await loadJSON();
 updateGWA();
 
 function updateGWA () {
@@ -33,7 +33,6 @@ function updateGWA () {
 
         if (grade == 5.00) {
             incomplete = true;
-            continue;
         }
 
         gwaPreDivide += grade*subject[2];
