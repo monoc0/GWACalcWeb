@@ -11,7 +11,7 @@ import { loadJSON, gradeForms } from "./global.js";
         const headerGrade = document.createElement('div'); headerGrade.className = "cell";
         const headerRow = document.createElement('div'); headerRow.className = "row";
         headerTitle.textContent = "Subject";
-        headerGrade.textContent = "Grade";
+        headerGrade.textContent = "1Q Grade";
         headerRow.appendChild(headerTitle);
         headerRow.appendChild(headerGrade);
         headerCore.appendChild(headerRow)
@@ -46,7 +46,7 @@ import { loadJSON, gradeForms } from "./global.js";
         try {
             const gradeSystem = await loadJSON("test.json");
             console.log(gradeSystem.desc);
-            document.getElementById("desc").textContent = gradeSystem.desc;
+            document.getElementById("desc").innerHTML = gradeSystem.desc;
             const gradeTable = tableCreate(gradeSystem)
             document.getElementById("content").appendChild(gradeTable)
         } catch (error) {

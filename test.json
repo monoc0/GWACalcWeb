@@ -12,6 +12,6 @@
         ["fil", "Filipino", 1],
         ["ss", "Social Sciences", 1],
         ["pehm", "PEHM", 1],
-        ["val", "Values Education", 0.7, ["COM", "INC"]]
+        ["val", "Values Education", 0.7, true]
     ]
 }

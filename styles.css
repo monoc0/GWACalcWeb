@@ -159,3 +159,7 @@ body {
   padding: 0.25em .5em;
   width: calc(30% - 14px);
 }
+
+#footer div div#gwa.bad {
+  color:#f00
+}

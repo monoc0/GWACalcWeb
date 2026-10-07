@@ -1,4 +1,4 @@
-import { loadJSON, gradeForms, waitForElement } from "./global.js";
+import { loadJSON, gradeForms, antiNumericForms, waitForElement } from "./global.js";
 import { initCustomSelect } from "./select.js";
 
 {
@@ -24,7 +24,12 @@ import { initCustomSelect } from "./select.js";
             selectStyle.className = "custom-select";
             const selectElement = document.createElement('select');
             const match = gradeSystem.subjects.find(s => s[0] === subject);
-            const grades = match?.[3] ?? gradeForms;
+            let grades;
+            if (match?.[3] == true) {
+                grades = antiNumericForms;
+            } else {
+                grades = gradeForms;
+            };
             for (const grade of grades) {
                 const option = document.createElement("option");
                 option.value = grade;

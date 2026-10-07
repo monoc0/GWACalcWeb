@@ -21,6 +21,11 @@ export const gradeForms = [
     5.00
 ]
 
+export const antiNumericForms = [
+    "COM",
+    "INC"
+]
+
 export function waitForElement(id, timeout = 5000) {
     return new Promise((resolve) => {
         const found = document.getElementById(id);
