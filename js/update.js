@@ -35,8 +35,10 @@ function updateGWA () {
             incomplete = true;
         }
 
-        gwaPreDivide += grade*subject[2];
-        gwaDivisor += subject[2];
+        if (grade) {
+            gwaPreDivide += grade*subject[2];
+            gwaDivisor += subject[2];
+        }
     }
     
     const cell = document.getElementById("gwa");

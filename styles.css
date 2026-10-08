@@ -23,13 +23,13 @@ h2 {
   padding: 0.4em;
   margin: 0.5em 1em;
   align-items: center;
-  width: 95%;
+  width: 100%;
   position:sticky;
   z-index: 9999;
   top: 0;
 }
 
-#topbar a, #topbar a:link, #topbar a:active {
+#topbar a, #topbar a:link, #topbar a:visited, #topbar a:active {
   text-decoration: none;
   padding: 0.5em;
   margin-left: 0.25em;
